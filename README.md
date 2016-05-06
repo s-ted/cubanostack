@@ -1,8 +1,8 @@
 # Cubanostack
 
   [![Build Status](https://travis-ci.org/s-ted/cubanostack.svg)](https://travis-ci.org/s-ted/cubanostack)
-  [![Dependencies Status](http://jarkeeper.com/cubane/cubanostack/status.svg)](http://jarkeeper.com/cubane/cubanostack)
-  [![Download Status](https://jarkeeper.com/cubane/cubanostack/downloads.svg)](https://jarkeeper.com/cubane/cubanostack)
+  [![Dependencies Status](http://jarkeeper.com/cubane/stack/status.svg)](http://jarkeeper.com/cubane/stack)
+  [![Download Status](https://jarkeeper.com/cubane/stack/downloads.svg)](https://jarkeeper.com/cubane/stack)
 
   Full spectrum website stack in [Clojure](https://github.com/clojure/clojure) and [ClojureScript](https://github.com/clojure/clojurescript) 
 
@@ -102,7 +102,7 @@ By using Stuart's component, and registring _Wrappers_ in the _WrapperManager_, 
 
 ## Installation
 
-   [![Clojar link](https://clojars.org/cubane/Cubanostack/latest-version.svg)](https://clojars.org/cubane/cubanostack)
+   [![Clojar link](https://clojars.org/cubane/stack/latest-version.svg)](https://clojars.org/cubane/stack)
 
 
 ## Usage
