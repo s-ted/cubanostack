@@ -115,7 +115,7 @@
                                         [lein-doo "0.1.6"]
                                         [lein-midje "3.2"]]
 
-                        :env           {:dev? "true"}
+                        :env           {:dev "true"}
 
                         :cljsbuild     {:builds
                                         {:test

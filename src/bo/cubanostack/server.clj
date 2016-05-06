@@ -35,8 +35,8 @@
 
           [#(wrap-authentication % auth/auth-backend)]
 
-          (when-not (environ/env :dev?) [wrap-with-logger])
+          (when-not (environ/env :dev) [wrap-with-logger])
 
-          (when (environ/env :dev?) [#(liberator/wrap-trace % :header)])
+          (when (environ/env :dev) [#(liberator/wrap-trace % :header)])
 
-          (when (environ/env :dev?) [wrap-reload])))
+          (when (environ/env :dev) [wrap-reload])))
