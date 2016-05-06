@@ -1,0 +1,72 @@
+html, body, #app {
+  height: 100%;
+  background-color: #f0f2f5;
+  color: #999999; }
+
+.wrapper .center {
+  padding: 23px; }
+
+.wrapper .center-with-menu {
+  padding-top: 23px;
+  padding-right: 23px; }
+
+.wrapper .navbar {
+  border-radius: 0;
+  margin-bottom: 0; }
+
+.wrapper .menu {
+  background-color: #999999; }
+  .wrapper .menu ul li {
+    background-color: #3c3c3c;
+    color: #d9d9d9;
+    outline: none;
+    border-bottom: 1px solid #484848; }
+    .wrapper .menu ul li a {
+      color: #d9d9d9;
+      padding: 15px; }
+      .wrapper .menu ul li a.active {
+        background-color: #3e77ab;
+        color: #fff; }
+      .wrapper .menu ul li a:hover {
+        background: #303030;
+        color: #fff; }
+    .wrapper .menu ul li span.glyphicon {
+      margin-right: 10px; }
+
+.wrapper .footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  padding: 15px 20px;
+  background-color: #fff;
+  color: #aaa; }
+
+.login_box {
+  margin: 10px auto;
+  background-color: #fff;
+  width: 360px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px #e6e6e6;
+  padding: 30px;
+  border: 1px solid #cde2e9;
+  font-size: 14px; }
+  .login_box h1 {
+    color: #f60;
+    margin-top: 0; }
+  .login_box .line {
+    position: relative;
+    border-bottom: 1px solid #cde1e9;
+    margin: 20px 0; }
+    .login_box .line span {
+      position: absolute;
+      padding: 0 20px;
+      left: 40%;
+      top: -8px;
+      color: #999;
+      background: #fff;
+      font-size: 12px; }
+
+#notifications .popover-content {
+  width: 274px; }
+  #notifications .popover-content li {
+    color: #000; }

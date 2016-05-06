@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+html, body, #app {
+  height: 100%;
+  background-color: #f0f2f5;
+  color: #999999;
+}
+
+.wrapper {
+  .center {
+    padding: 23px;
+  }
+
+  .center-with-menu {
+    padding-top: 23px;
+    padding-right: 23px;
+  }
+
+  .navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  .menu {
+    background-color: #999999;
+
+    ul li {
+      background-color: #3c3c3c;
+      color: #d9d9d9;
+      outline: none;
+      border-bottom: 1px solid #484848;
+
+      a {
+        color: #d9d9d9;
+        padding: 15px;
+
+        &.active {
+          background-color: #3e77ab;
+          color: #fff;
+        }
+
+        &:hover {
+          background: #303030;
+          color: #fff;
+        }
+      }
+
+      span.glyphicon {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    padding: 15px 20px;
+    background-color: #fff;
+    color: #aaa;
+  }
+}
+
+
+.login_box {
+  margin: 10px auto;
+  background-color: #fff;
+  width: 360px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px #e6e6e6;
+  padding: 30px;
+  border: 1px solid #cde2e9;
+  font-size: 14px;
+
+  h1 {
+    color: #f60;
+    margin-top: 0;
+  }
+
+  .line {
+    position: relative;
+    border-bottom: 1px solid #cde1e9;
+    margin: 20px 0;
+
+    span {
+      position: absolute;
+      padding: 0 20px;
+      left: 40%;
+      top: -8px;
+      color: #999;
+      background: #fff;
+      font-size: 12px;
+    }
+  }
+}
+
+#notifications {
+  .popover-content {
+    width: 274px;
+
+    li {
+      color: #000;
+    }
+  }
+}
