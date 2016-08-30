@@ -47,9 +47,9 @@
 
                        ; cljs libs
                        [org.clojure/clojurescript "1.7.228" :scope "provided"]
-                       [quiescent/quiescent "0.3.1"]
+                       [quiescent/quiescent "0.3.2"]
                        [cljs-http "0.1.39"]
-                       [cljsjs/react-bootstrap "0.28.1-1" :exclusions [org.webjars.bower/jquery]]
+                       [cljsjs/react-bootstrap "0.30.2-0" :exclusions [org.webjars.bower/jquery]]
                        [cubane/cublono-quiescent "0.1.0-SNAPSHOT"]]
   :plugins            [[lein-ring "0.9.6"]
                        [lein-cljsbuild "1.1.2"]
