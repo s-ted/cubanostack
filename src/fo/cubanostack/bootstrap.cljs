@@ -32,10 +32,13 @@
   Dropdown.Toggle
   FormControls
   FormControls.Static
+  FormGroup
   Glyphicon
   Grid
   Image
   Input
+  InputGroup
+  InputGroup.Addon
   Jumbotron
   Label
   ListGroup
