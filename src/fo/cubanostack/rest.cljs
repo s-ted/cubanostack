@@ -127,6 +127,8 @@
     (merge
       (let [location (aget js/window "location")]
         {:protocol (aget location "protocol")
-         :port     (aget location "port")
+         :port     (let [port (aget location "port")]
+                     (when-not (= "" port)
+                       port))
          :hostname (aget location "hostname")})
       params)))
