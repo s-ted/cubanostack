@@ -129,7 +129,7 @@
      :put!                  (fn [ctx]
                               {:entry (d/update! Dal
                                                  (ctx->entity-id ctx)
-                                                 (:data ctx :data))})
+                                                 (:data ctx))})
 
      :patch!                (fn [ctx]
                               {:entry (d/patch! Dal
