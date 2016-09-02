@@ -43,7 +43,6 @@
   Grid
   HelpBlock
   Image
-  Input
   InputGroup
   InputGroup.Addon
   InputGroup.Button

@@ -109,21 +109,20 @@
        "Delete"]]
 
      [:form {:className "form-horizontal"}
-      [:ReactBootstrap/Input
-       {:type             "text"
-        :value            current-local-route
-        :placeholder      "The handler (such as 'home' or 'settings/stuff') [will be keywordized]"
-        :label            route-str
-        :labelClassName   "col-md-4"
-        :wrapperClassName "col-md-4"
-        :onChange
-        (h%
-          (set-local-route-val
-            (-> event
-                .-target
-                .-value)
-            route
-            Bus))}]]]))
+      [:ReactBootstrap/FormGroup {:controlId "local-route"}
+       [:ReactBootstrap/ControlLabel route-str]
+       [:ReactBootstrap/FormControl
+        {:type             "text"
+         :value            current-local-route
+         :placeholder      "The handler (such as 'home' or 'settings/stuff') [will be keywordized]"
+         :onChange
+         (h%
+           (set-local-route-val
+             (-> event
+                 .-target
+                 .-value)
+             route
+             Bus))}]]]]))
 
 (ui/defcomponent UI
   [{:keys [routes] :as state} Bus]
@@ -147,20 +146,22 @@
     [:form {:className "form-horizontal"}
      [:ReactBootstrap/Row nil
       [:ReactBootstrap/Col {:md 4}
-       [:ReactBootstrap/Input
-        {:type        "text"
-         :value       (get-in state [::new-routes :route])
-         :placeholder "/my/new/route"
-         :onChange
-         (h%
-           (.preventDefault event)
-           (set-local-new-route
-             (-> event
-                 .-target
-                 .-value)
-             Bus))}]]
+       [:ReactBootstrap/FormGroup nil
+        [:ReactBootstrap/FormControl
+         {:type        "text"
+          :value       (get-in state [::new-routes :route])
+          :placeholder "/my/new/route"
+          :onChange
+          (h%
+            (.preventDefault event)
+            (set-local-new-route
+              (-> event
+                  .-target
+                  .-value)
+              Bus))}]]]
       [:ReactBootstrap/Col {:md 4}
-       [:ReactBootstrap/Input
+       [:ReactBootstrap/FormGroup nil
+        [:ReactBootstrap/FormControl
         {:type        "text"
          :value       (get-in state [::new-routes :handler])
          :placeholder "The handler (such as 'home' or 'settings/stuff') [will be keywordized]"
@@ -170,4 +171,4 @@
              (-> event
                  .-target
                  .-value)
-             Bus))}]]]]]])
+             Bus))}]]]]]]])

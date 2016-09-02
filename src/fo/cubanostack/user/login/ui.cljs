@@ -40,10 +40,14 @@
 
   [:form.form-horizontal
 
-    [:ReactBootstrap/Input
+    [:ReactBootstrap/FormGroup nil
+     [:ReactBootstrap/InputGroup nil
+      [:ReactBootstrap/InputGroup.Addon nil
+       (ui/icon :user)]
+
+      [:ReactBootstrap/FormControl
        {:type             "text"
         :value            (:username local-item)
-        :addonBefore      (ui/icon :user)
         :onChange
         (h%
           (-set-local-item
@@ -51,12 +55,16 @@
             (-> event
                 .-target
                 .-value)
-            Bus))}]
+            Bus))}]]]
 
-    [:ReactBootstrap/Input
+    [:ReactBootstrap/FormGroup nil
+     [:ReactBootstrap/InputGroup nil
+      [:ReactBootstrap/InputGroup.Addon nil
+       (ui/icon :lock)]
+
+      [:ReactBootstrap/FormControl
        {:type             "password"
         :value            (:password local-item)
-        :addonBefore      (ui/icon :lock)
         :onChange
         (h%
           (-set-local-item
@@ -64,7 +72,7 @@
             (-> event
                 .-target
                 .-value)
-            Bus))}]
+            Bus))}]]]
 
     [:.form-group
       [:ReactBootstrap/Button

@@ -74,54 +74,51 @@
 
   [:ReactBootstrap/Panel nil
    [:form {:className "form-horizontal"}
-    [:ReactBootstrap/Input
-     {:type             "text"
-      :value            (:username local-item)
-      :placeholder      "jdoe"
-      :label            "Username"
-      :labelClassName   "col-xs-2"
-      :wrapperClassName "col-xs-10"
-      :onChange
-      (h%
-        (set-local-item
-          [:username]
-          (-> event
-              .-target
-              .-value)
-          Bus))}]
+    [:ReactBootstrap/FormGroup {:controlId "username"}
+     [:ReactBootstrap/ControlLabel "Username"]
+     [:ReactBootstrap/FormControl
+      {:type             "text"
+       :value            (:username local-item)
+       :placeholder      "jdoe"
+       :onChange
+       (h%
+         (set-local-item
+           [:username]
+           (-> event
+               .-target
+               .-value)
+           Bus))}]]
 
-    [:ReactBootstrap/Input
-     {:type             "text"
-      :value            (:clear-password local-item)
-      :placeholder      "mysecret"
-      :label            "Password"
-      :labelClassName   "col-xs-2"
-      :wrapperClassName "col-xs-10"
-      :onChange
-      (h%
-        (set-local-item
-          [:clear-password]
-          (-> event
-              .-target
-              .-value)
-          Bus))}]
+    [:ReactBootstrap/FormGroup {:controlId "password"}
+     [:ReactBootstrap/ControlLabel "Password"]
+     [:ReactBootstrap/FormControl
+      {:type             "text"
+       :value            (:clear-password local-item)
+       :placeholder      "mysecret"
+       :onChange
+       (h%
+         (set-local-item
+           [:clear-password]
+           (-> event
+               .-target
+               .-value)
+           Bus))}]]
 
     (map
       (fn [[k v]]
-        [:ReactBootstrap/Input
-         {:type      "checkbox"
-          :checked   (k (:roles local-item))
-          :label     v
-          :key       k
-          :wrapperClassName "col-xs-offset-2 col-xs-10"
-          :onChange
-          (h%
-            (set-local-item-role
-              k
-              (-> event
-                  .-target
-                  .-checked)
-              Bus))}])
+        [:ReactBootstrap/FormGroup {:controlId k
+                                    :key       k}
+         [:ReactBootstrap/ControlLabel v]
+         [:ReactBootstrap/Checkbox
+          {:checked   (k (:roles local-item))
+           :onChange
+           (h%
+             (set-local-item-role
+               k
+               (-> event
+                   .-target
+                   .-checked)
+               Bus))}]])
       {:admin "Admin"
        :user  "User"
        :guest "Guest"})
