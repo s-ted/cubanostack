@@ -26,7 +26,7 @@
     (bus/send! :renderer)))
 
 (defn -panel-content [[wrapper-id wrapper-info] workflow Bus]
-  [:ReactBootstrap/ListGroupItem {:key wrapper-id}
+  [:ReactBootstrap/ListGroupItem {:key (str wrapper-id)}
 
    [:ReactBootstrap/ButtonGroup {:bsClass "pull-right"
                                  :bsSize  :small}
@@ -44,7 +44,7 @@
    (name wrapper-id)])
 
 (defn- -panelize [[workflow wrappers] Bus]
-  [:ReactBootstrap/Panel {:key    workflow
+  [:ReactBootstrap/Panel {:key    (str workflow)
                           :header (str "Workflow " workflow)}
    [:ReactBootstrap/ListGroup nil
     (map #(-panel-content % workflow Bus)

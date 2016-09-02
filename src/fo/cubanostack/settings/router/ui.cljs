@@ -109,7 +109,7 @@
        "Delete"]]
 
      [:form {:className "form-horizontal"}
-      [:ReactBootstrap/FormGroup {:controlId "local-route"}
+      [:ReactBootstrap/FormGroup {:controlId (str "local-route-" route-str)}
        [:ReactBootstrap/ControlLabel route-str]
        [:ReactBootstrap/FormControl
         {:type             "text"
